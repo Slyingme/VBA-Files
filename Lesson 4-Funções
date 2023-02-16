@@ -1,0 +1,7 @@
+Function MaiorNumero(Valor1 As Double, Valor2 As Double) As Double
+    If Valor1 > Valor2 Then
+        MaiorNumero = Valor1
+    Else
+        MaiorNumero = Valor2
+    End If
+End Function
