@@ -1,0 +1,7 @@
+Sub FormatarPlanilha()
+   With ThisWorkbook.ActiveSheet
+      .Range("A1:D10").Font.Bold = True
+      .Range("A1:D10").Font.Size = 12
+      .Range("A1:D10").Interior.ColorIndex = 3
+   End With
+End Sub

@@ -1,0 +1,28 @@
+'Note que você deve atribuir um nome a cada controle de formulário antes 
+'de usá-lo em seu código. Além disso, você deve certificar-se de que o 
+'tipo de dado que está sendo atribuído ao controle é compatível com o tipo 
+'de dado esperado pelo controle.
+
+
+'Atribuir valor a uma caixa de texto
+TextBox1.Value = "Hello World"
+
+'Atribuir valor a uma caixa de seleção
+CheckBox1.Value = True
+
+'Atribuir valor a uma barra de rolagem
+ScrollBar1.Value = 50
+
+'Obter valor de uma caixa de texto
+Dim textValue As String
+textValue = TextBox1.Value
+
+'Obter valor de uma caixa de seleção
+Dim checkValue As Boolean
+checkValue = CheckBox1.Value
+
+'Obter valor de uma barra de rolagem
+Dim scrollValue As Integer
+scrollValue = ScrollBar1.Value
+
+

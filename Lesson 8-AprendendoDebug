@@ -1,0 +1,12 @@
+'DEBUG é importante para monitorar cada etapa do seu código e entender como ele funciona
+
+Sub DebuggingExample()
+   Dim x As Integer
+   x = 1
+   Debug.Print x 'Saída no Immediate Window: 1
+   x = x + 1
+   Debug.Print x 'Saída no Immediate Window: 2
+   Stop 'Pausa a execução da macro
+   x = x + 1
+   Debug.Print x 'Não é executado
+End Sub

@@ -1,0 +1,24 @@
+Sub ImportarDadosAccess()
+   Dim Conexao As Object
+   Dim Rs As Object
+   Dim Planilha As Worksheet
+   Dim UltimaLinha As Long
+   
+   Set Planilha = ThisWorkbook.Sheets("Planilha1")
+   UltimaLinha = Planilha.Cells(Planilha.Rows.Count, "A").End(xlUp).Row
+   
+   Set Conexao = CreateObject("ADODB.Connection")
+   Set Rs = CreateObject("ADODB.Recordset")
+   
+   Conexao.Open "Provider=Microsoft.Jet.OLEDB.4.0;Data Source=C:\BancosDeDados\MeuBancoDeDados.mdb"
+   
+   Rs.Open "SELECT * FROM Tabela1", Conexao
+   
+   Planilha.Range("A" & UltimaLinha + 1).CopyFromRecordset Rs
+   
+   Rs.Close
+   Conexao.Close
+   
+   Set Rs = Nothing
+   Set Conexao = Nothing
+End Sub
