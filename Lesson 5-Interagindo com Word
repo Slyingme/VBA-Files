@@ -1,0 +1,22 @@
+Sub CopiarInformacoes()
+    'Copiar informações da planilha ativa
+    Range("A1:C3").Copy
+    
+    'Abrir o Microsoft Word
+    Dim objWord As Object
+    Set objWord = CreateObject("Word.Application")
+    objWord.Visible = True
+    
+    'Criar um novo documento
+    Dim objDoc As Object
+    Set objDoc = objWord.Documents.Add
+    
+    'Colar informações no documento
+    objWord.Selection.Paste
+    
+    'Salvar o documento
+    objDoc.SaveAs "C:\MeuDocumento.docx"
+    
+    'Fechar o Microsoft Word
+    objWord.Quit
+End Sub
