@@ -1,0 +1,32 @@
+Sub exemplo()
+
+Dim num1 As Integer 'Declaração de variável
+num1 = 10 'Atribuição de valor à variável
+
+'Estrutura condicional (If...Then)
+If num1 > 5 Then
+    MsgBox "O valor é maior que 5"
+End If
+
+'Estrutura de repetição (For)
+For i = 1 To 5
+    MsgBox "Iteração " & i
+Next i
+
+'Procedimento (Sub)
+Sub exibirMensagem()
+    MsgBox "Mensagem exibida por procedimento"
+End Sub
+
+'Chamada ao procedimento
+exibirMensagem
+
+'Função (Function)
+Function soma(num1 As Integer, num2 As Integer) As Integer
+    soma = num1 + num2
+End Function
+
+'Chamada à função
+MsgBox "A soma é: " & soma(5, 10)
+
+End Sub
