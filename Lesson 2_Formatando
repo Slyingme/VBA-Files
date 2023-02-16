@@ -1,0 +1,55 @@
+Sub ExemploDeMacro()
+' Seleciona a faixa de células B4:C4
+    Range("B4:C4").Select
+' Ajusta a cor de fundo da seleção
+    With Selection.Interior
+        .Pattern = xlSolid
+        .PatternColorIndex = xlAutomatic
+        .ThemeColor = xlThemeColorAccent1
+        .TintAndShade = 0.399975585192419
+        .PatternTintAndShade = 0
+    End With
+' Deixa a fonte da seleção em negrito
+    Selection.Font.Bold = True
+' Remove as bordas diagonais
+    Selection.Borders(xlDiagonalDown).LineStyle = xlNone
+    Selection.Borders(xlDiagonalUp).LineStyle = xlNone
+' Ajusta a borda esquerda
+    With Selection.Borders(xlEdgeLeft)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlMedium
+    End With
+' Ajusta a borda superior
+    With Selection.Borders(xlEdgeTop)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlMedium
+    End With
+' Ajusta a borda inferior
+    With Selection.Borders(xlEdgeBottom)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlMedium
+    End With
+' Ajusta a borda direita
+    With Selection.Borders(xlEdgeRight)
+        .LineStyle = xlContinuous
+        .ColorIndex = 0
+        .TintAndShade = 0
+        .Weight = xlMedium
+    End With
+' Remove as bordas verticais internas
+    Selection.Borders(xlInsideVertical).LineStyle = xlNone
+' Remove as bordas horizontais internas
+    Selection.Borders(xlInsideHorizontal).LineStyle = xlNone
+' Ajusta o tamanho da fonte para 14
+    Selection.Font.Size = 14
+' Ajusta o tamanho da coluna B para se adequar ao conteúdo
+    Columns("B:B").EntireColumn.AutoFit
+' Seleciona a célula B7
+    Range("B7").Select
+End Sub
