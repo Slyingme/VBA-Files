@@ -1,0 +1,20 @@
+Sub EnviarEmail()
+    'Criar objeto de envio de e-mail
+    Dim objEmail As Object
+    Set objEmail = CreateObject("Outlook.Application")
+    
+    'Criar nova mensagem de e-mail
+    Dim objMensagem As Object
+    Set objMensagem = objEmail.CreateItem(0)
+    
+    'Definir destinatário, assunto e corpo da mensagem
+    objMensagem.To = "destinatario@email.com"
+    objMensagem.Subject = "Meu primeiro e-mail com VBA"
+    objMensagem.Body = "Este é o corpo da minha mensagem de e-mail."
+    
+    'Adicionar anexos
+    objMensagem.Attachments.Add "C:\MeuAnexo.pdf"
+    
+    'Enviar e-mail
+    objMensagem.Send
+End Sub
