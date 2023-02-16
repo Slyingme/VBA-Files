@@ -1,0 +1,25 @@
+Sub LeituraDeDados()
+    ' Armazenando o valor de uma célula em uma variável
+    Dim valor As Variant
+    valor = Range("A1").Value
+    
+    ' Exibindo o valor na janela de Immediate (Painel Imediato)
+    Debug.Print valor
+End Sub
+
+Sub EscritaDeDados()
+    ' Escrevendo um valor em uma célula
+    Range("A1").Value = "Novo valor"
+End Sub
+
+Sub CriarPlanilha()
+    ' Criando uma nova planilha
+    Dim novaPlanilha As Worksheet
+    Set novaPlanilha = ThisWorkbook.Sheets.Add
+    novaPlanilha.Name = "Minha nova planilha"
+End Sub
+
+Sub ExcluirPlanilha()
+    ' Excluindo uma planilha existente
+    ThisWorkbook.Sheets("Minha planilha").Delete
+End Sub
